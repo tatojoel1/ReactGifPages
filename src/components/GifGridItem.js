@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import { Card, Button, Col, Tooltip, Overlay } from "react-bootstrap";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
@@ -20,10 +21,17 @@ export const GifGridItem = ({ title, url }) => {
         <Card.Img variant="top" src={url} alt={title} />
         <Card.Body>
           <Card.Title className="card-title">
-            {title.length > 0 ? title : "No title found"}
+            <p>{title}</p>
+            {/* {title.length > 0 ? title : "No title found"} */}
           </Card.Title>
         </Card.Body>
-        <Card.Text>{title.length > 0 ? "" : "Sorry, but the author doesn't put it some title in the gif"}</Card.Text>
+        <Card.Text>
+          <h4>Link of gif: </h4>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {url}
+          </a>
+        </Card.Text>
+        {/* <Card.Text>{title.length > 0 ? "" : "Sorry, but the author doesn't put it some title in the gif"}</Card.Text> */}
         <Card.Footer>
           <CopyToClipboard text={url} onCopy={() => setcopyText(true)}>
             <Button
@@ -45,4 +53,9 @@ export const GifGridItem = ({ title, url }) => {
       </Card>
     </Col>
   );
+};
+
+GifGridItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };

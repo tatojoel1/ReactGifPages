@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GifGridItem /> Debe mostrar el componente correctamente 1`] = `
+<Col
+  className="mb-4"
+  md={4}
+>
+  <Card
+    body={false}
+    className="card animate__animated animate__fadeIn"
+  >
+    <CardImg
+      alt="Un titulo"
+      src="https://localhost/algo.jpg"
+      variant="top"
+    />
+    <CardBody>
+      <CardTitle
+        className="card-title"
+      >
+        <p>
+          Un titulo
+        </p>
+      </CardTitle>
+    </CardBody>
+    <CardText>
+      <h4>
+        Link of gif: 
+      </h4>
+      <a
+        href="https://localhost/algo.jpg"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        https://localhost/algo.jpg
+      </a>
+    </CardText>
+    <CardFooter>
+      <CopyToClipboard
+        onCopy={[Function]}
+        text="https://localhost/algo.jpg"
+      >
+        <Button
+          active={false}
+          className="copy-button rounded-pill"
+          disabled={false}
+          onClick={[Function]}
+          variant="primary"
+        >
+          Copy
+        </Button>
+      </CopyToClipboard>
+      <Overlay
+        placement="right"
+        rootClose={false}
+        show={false}
+        target={null}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+      >
+        <Component />
+      </Overlay>
+    </CardFooter>
+  </Card>
+</Col>
+`;

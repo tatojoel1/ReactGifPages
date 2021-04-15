@@ -11,7 +11,7 @@ export const AddCategory = ({ setCategories }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    //console.log("handeSubmit", inputValue);
     if (inputValue.trim().length > 2) {
       setCategories((cats) => [inputValue, ...cats]);
       setInputValue("");
@@ -21,9 +21,11 @@ export const AddCategory = ({ setCategories }) => {
   return (
     <form onSubmit={handleSubmit}>
       <Form.Group controlId="formBasicEmail">
+        <p>{inputValue}</p>
         <Form.Label>Type in the box to seek some gifs for you</Form.Label>
-        <Form.Control
+        <input
           type="text"
+          className="form-control"
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Example...Tacos"

@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from 'prop-types'
 import { CardGroup, Row } from "react-bootstrap";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifGridItem } from "./GifGridItem";
 
 export const GifGrid = ({ category }) => {
-  const { data: images, loading } = useFetchGifs(category);
+  const { data, loading } = useFetchGifs(category);
 
   return (
     <>
@@ -15,7 +16,7 @@ export const GifGrid = ({ category }) => {
 
         <div className="card-grid">
           <Row md={4}>
-            {images.map((img) => (
+            {data.map((img) => (
               <GifGridItem key={img.id} {...img} />
             ))}
           </Row>
@@ -24,3 +25,7 @@ export const GifGrid = ({ category }) => {
     </>
   );
 };
+
+GifGrid.prototypes = {
+  category: PropTypes.string.isRequired
+}

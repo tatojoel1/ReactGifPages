@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba en el componente AddCategory Debe de mostrarse correctamente 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <FormGroup
+    controlId="formBasicEmail"
+  >
+    <p />
+    <FormLabel
+      column={false}
+      srOnly={false}
+    >
+      Type in the box to seek some gifs for you
+    </FormLabel>
+    <input
+      className="form-control"
+      onChange={[Function]}
+      placeholder="Example...Tacos"
+      type="text"
+      value=""
+    />
+  </FormGroup>
+</form>
+`;
